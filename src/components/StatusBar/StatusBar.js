@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, Image, TouchableOpacity } from 'react-native';
 import styles from './StatusBarStyles'
-const arrow = require('../../assets/arrow.png')
+const arrow = require('../../assets/arrow-left.png')
 
 class StatusBar extends Component {
   constructor(props) {
