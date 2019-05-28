@@ -4,6 +4,7 @@ import Input from '../../components/Input/Input';
 import styles from './UserFormStyles'
 import StatusBar from '../../components/StatusBar/StatusBar'
 import Heading from '../../components/Heading/Heading'
+import PhotoUploadBar from '../../components/PhotoUploadBar/PhotoUploadBar';
 
 export class UserForm extends Component {
     render() {
@@ -12,6 +13,7 @@ export class UserForm extends Component {
                 <Heading>
                     Edit profile
                 </Heading>
+                <PhotoUploadBar />
                 <Input 
                     placeholder="First name"
                 />
