@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import {Platform, StyleSheet, Text, View, ScrollView} from 'react-native';
 import UserForm from './src/pages/UserForm/UserForm';
 import StatusBar from './src/components/StatusBar/StatusBar'
 
@@ -11,10 +11,10 @@ const styles = StyleSheet.create({
 export default class App extends Component<Props> {
   render() {
     return (
-      <View style={styles.app}>
+      <ScrollView style={styles.app}>
         <StatusBar />
         <UserForm />
-      </View>
+      </ScrollView>
     );
   }
 }
