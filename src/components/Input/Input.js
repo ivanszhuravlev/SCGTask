@@ -66,7 +66,14 @@ export class Input extends Component {
         this.setState({
             ...this.state,
             state: valid ? 'valid' : 'invalid'
+        }, () => {
+            this.pushState()
         })
+    }
+
+    pushState = () => {
+        const valid = this.state.state === 'valid' ? true : false
+        this.props.pushState(this.state.value, valid)
     }
 
     checkNotEmpty = (text) => {
