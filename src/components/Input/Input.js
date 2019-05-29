@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { Text, View, TextInput, TouchableOpacity } from 'react-native'
 import styles from './InputStyles'
-
+import SvgUri from 'react-native-svg-uri';
+import loadingCircle from '../../assets/loading.svg';
 export class Input extends Component {
 
     constructor(props) {
