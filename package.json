@@ -8,14 +8,20 @@
   },
   "dependencies": {
     "react": "16.8.3",
-    "react-native": "0.59.8"
+    "react-native": "0.59.8",
+    "react-native-keyboard-aware-scroll-view": "^0.8.0",
+    "react-native-svg": "^9.4.0",
+    "react-native-svg-transformer": "^0.13.0",
+    "react-native-svg-uri": "^1.2.3"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
     "@babel/runtime": "^7.4.5",
     "babel-jest": "^24.8.0",
+    "babel-plugin-inline-import": "^3.0.0",
     "jest": "^24.8.0",
     "metro-react-native-babel-preset": "^0.54.1",
+    "metro-react-native-babel-transformer": "^0.54.1",
     "react-test-renderer": "16.8.3"
   },
   "jest": {
