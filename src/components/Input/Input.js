@@ -48,6 +48,9 @@ export class Input extends Component {
                 case "phone":
                     method = this.checkPhoneValid(text)
                     break
+                case "email":
+                    method = this.checkEmailValid(text)
+                    break
                 default:
                     method = true
                     break
@@ -74,9 +77,9 @@ export class Input extends Component {
         return /\+7[0-9]{10}/.test(text.trim())
     }
 
-    // checkEmailValid = (text) => {
-    //     return
-    // }
+    checkEmailValid = (text) => {
+        return /^[0-9a-z-\.]+\@[0-9a-z-]{2,}\.[a-z]{2,}$/i.test(text.trim())
+    }
 
 
 
