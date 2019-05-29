@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
         minHeight: '100%',
         paddingHorizontal: 16,
         paddingTop: 0,
-        paddingBottom: 16
+        paddingBottom: 37
     }
 })
 

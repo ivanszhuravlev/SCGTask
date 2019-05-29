@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
     barButton: {
         paddingVertical: 16,
         marginTop: 16,
-        marginBottom: 28
+        marginBottom: 16
     },
     photo: {
         width: 64,

@@ -9,8 +9,7 @@ const styles = StyleSheet.create({
         borderBottomWidth: 1,
         fontSize: 18,
         // lineHeight: 24
-        margin: 0
-
+        margin: 0,
     },
     inputWrapper: {
         position: 'relative',
@@ -19,17 +18,24 @@ const styles = StyleSheet.create({
     connectButton: {
         position: 'absolute',
         right: 0,
-        top: 11
+        bottom: 8
     },
     connectText: {
         fontSize: 16,
         color: '#0088CC'
     },
-    alert: {
+    label: {
         fontSize: 15,
-        marginVertical: 8,
+        marginTop: 16,
+        marginBottom: 0,
         padding: 0,
-
+        color: '#ced3d6'
+    },
+    invalid: {
+        borderBottomColor: '#cc0056'
+    },
+    valid: {
+        borderBottomColor: '#0088cc'
     }
 })
 

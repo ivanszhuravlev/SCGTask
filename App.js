@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View, ScrollView} from 'react-native';
-import UserForm from './src/pages/UserForm/UserForm';
 import StatusBar from './src/components/StatusBar/StatusBar'
+import UserSettings from './src/pages/UserSettings/UserSettings';
 
 const styles = StyleSheet.create({
   app: {
@@ -13,7 +13,7 @@ export default class App extends Component<Props> {
     return (
       <ScrollView style={styles.app}>
         <StatusBar />
-        <UserForm />
+        <UserSettings />
       </ScrollView>
     );
   }
