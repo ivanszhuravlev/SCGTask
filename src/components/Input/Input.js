@@ -51,6 +51,9 @@ export class Input extends Component {
                 case "email":
                     method = this.checkEmailValid(text)
                     break
+                case "link":
+                    method = this.checkLinkValid(text)
+                    break
                 default:
                     method = true
                     break
@@ -78,13 +81,17 @@ export class Input extends Component {
     }
 
     checkEmailValid = (text) => {
-        return /^[0-9a-z-\.]+\@[0-9a-z-]{2,}\.[a-z]{2,}$/i.test(text.trim())
+        return /^[0-9a-z-\._]+\@[0-9a-z-]{2,}\.[a-z]{2,}$/i.test(text.trim())
+    }
+
+    checkLinkValid = (text) => {
+        return /^(?:(?:http){1}s?\:\/{2})?(?:[0-9a-z-\.\-]+\.)+[a-z]{2,}$/.test(text.trim())
     }
 
 
 
     render() {
-        const {state, value} = this.state
+        const {state, value, loading} = this.state
         return (
             <View style={styles.inputWrapper}>
                 <Text style={styles.label}>

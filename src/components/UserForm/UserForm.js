@@ -26,11 +26,13 @@ export class UserForm extends Component {
                 <Input 
                     placeholder="Email"
                     validate="email required"
+                    autoCapitalize="none"
                 />
                 <Input 
                     placeholder="Link"
                     validate="link required"
                     modify="social"
+                    autoCapitalize="none"
                 />
             </View>
         )
