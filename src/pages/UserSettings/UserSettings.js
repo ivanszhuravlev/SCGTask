@@ -13,15 +13,24 @@ export class UserSettings extends Component {
         super(props)
     
         this.state = {
-             formValid: false
+             formValid: false,
+             photoLoaded: false
         }
     }
 
     getFormState = (valid) => {
         this.setState({
+            ...this.state,
             formValid: valid
         }, () => {
             console.log(this.state)
+        })
+    }
+
+    getPhotoLoaded = (photoLoaded) => {
+        this.setState({
+            ...this.state,
+            photoLoaded: photoLoaded
         })
     }
     
@@ -38,9 +47,9 @@ export class UserSettings extends Component {
                 <Heading>
                     Edit profile
                 </Heading>
-                <PhotoUploadBar />
+                <PhotoUploadBar pushPhotoLoaded={this.getPhotoLoaded}/>
                 <UserForm pushValid={this.getFormState} />
-                <SubmitButton text="Save" disabled={!this.state.formValid}/>
+                <SubmitButton text="Save" disabled={!this.state.formValid && !this.state.photoLoaded}/>
             </KeyboardAwareScrollView>
         )
     }

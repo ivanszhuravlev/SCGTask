@@ -4,7 +4,7 @@ import styles from './PhotoUploadStyles';
 
 const Photo = (props) => {
     return (
-        <ImageBackground style={styles.photo}>
+        <ImageBackground style={styles.photo} imageStyle={styles.photoBg} source={props.source}>
 
         </ImageBackground>
     )

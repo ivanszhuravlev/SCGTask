@@ -24,6 +24,11 @@ const styles = StyleSheet.create({
         fontSize: 16,
         lineHeight: 20,
         color: '#0088CC'
+    },
+    photoBg: {
+        borderRadius: 32,
+        width: 60,
+        height: 60,
     }
 });
 
