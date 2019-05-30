@@ -15,6 +15,9 @@ const styles = StyleSheet.create({
         letterSpacing: 0.25,
         color: "#EBEDEE"
     },
+    disabled: {
+        backgroundColor: '#ced3d6'
+    }
 });
 
 export default styles

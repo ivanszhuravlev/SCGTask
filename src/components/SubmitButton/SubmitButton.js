@@ -11,8 +11,10 @@ const SubmitButton = (props) => {
     return (
         <TouchableHighlight 
             underlayColor="#005885" 
-            style={styles.button}
+            style={[styles.button, props.disabled && styles.disabled]}
             onPress={()=>this.callback()}
+            disabled={props.disabled}
+            
         >
             <Text style={styles.buttonText}>{props.text}</Text>
         </TouchableHighlight>

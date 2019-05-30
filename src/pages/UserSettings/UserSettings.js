@@ -8,6 +8,24 @@ import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view
 import UserForm from '../../components/UserForm/UserForm';
 
 export class UserSettings extends Component {
+
+    constructor(props) {
+        super(props)
+    
+        this.state = {
+             formValid: false
+        }
+    }
+
+    getFormState = (valid) => {
+        this.setState({
+            formValid: valid
+        }, () => {
+            console.log(this.state)
+        })
+    }
+    
+
     render() {
         return (
             <KeyboardAwareScrollView 
@@ -21,8 +39,8 @@ export class UserSettings extends Component {
                     Edit profile
                 </Heading>
                 <PhotoUploadBar />
-                <UserForm />
-                <SubmitButton text="Save"/>
+                <UserForm pushValid={this.getFormState} />
+                <SubmitButton text="Save" disabled={!this.state.formValid}/>
             </KeyboardAwareScrollView>
         )
     }

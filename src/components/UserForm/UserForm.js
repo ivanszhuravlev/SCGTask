@@ -44,9 +44,22 @@ export class UserForm extends Component {
         super(props)
 
         this.state = {
-            fields: []
+            fields: {},
+            valid: false
         };
     };
+
+    componentWillMount() {
+        fields.map((field) => {
+            const fieldsFromState = this.state.fields
+            fieldsFromState[field.name] = {val: "", valid: false}
+
+            this.setState({
+                ...this.state,
+                fields: fieldsFromState
+            })
+        })
+    }
 
     getState = (val, valid, name) => {
         let fields = this.state.fields
@@ -54,12 +67,29 @@ export class UserForm extends Component {
         fields[name] = {val, valid}
 
         this.setState({
-            values: fields
+            ...this.state,
+            fields: fields
         }, () => {
-            console.log(this.state.values)
+            this.summonValidations()
         })
     }
 
+    summonValidations = () => {
+        let 
+            valid = true,
+            inputs = this.state.fields
+        for (let key in inputs) {
+            if (inputs.hasOwnProperty(key)) {
+                const input = inputs[key];
+                if (input.valid === false) {
+                    valid = false
+                }
+            }
+        }
+
+        this.props.pushValid(valid)
+        console.log(this.state)
+    }
 
     render() {
         return (
