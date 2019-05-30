@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, TouchableHighlight, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
 import styles from './PhotoUploadStyles';
 import Photo from './Photo';
 import ImagePicker from 'react-native-image-picker';

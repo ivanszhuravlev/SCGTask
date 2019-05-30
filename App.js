@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View, ScrollView} from 'react-native';
+import {StyleSheet} from 'react-native';
 import StatusBar from './src/components/StatusBar/StatusBar'
 import UserSettings from './src/pages/UserSettings/UserSettings';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 
 const styles = StyleSheet.create({
   app: {
@@ -11,10 +12,14 @@ const styles = StyleSheet.create({
 export default class App extends Component<Props> {
   render() {
     return (
-      <ScrollView style={styles.app}>
+      <KeyboardAwareScrollView 
+        style={styles.app}
+        extraScrollHeight={-80}
+        enableOnAndroid={true}
+      >
         <StatusBar />
         <UserSettings />
-      </ScrollView>
+      </KeyboardAwareScrollView>
     );
   }
 }

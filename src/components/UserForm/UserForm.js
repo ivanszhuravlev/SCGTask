@@ -1,11 +1,6 @@
 import React, { Component } from 'react'
 import { Text, View, ScrollView } from 'react-native'
 import Input from '../Input/Input';
-import styles from './UserFormStyles'
-import Heading from '../Heading/Heading'
-import PhotoUploadBar from '../PhotoUploadBar/PhotoUploadBar';
-import SubmitButton from '../SubmitButton/SubmitButton';
-import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 
 const fields = [
     {
@@ -45,7 +40,6 @@ export class UserForm extends Component {
 
         this.state = {
             fields: {},
-            valid: false
         };
     };
 

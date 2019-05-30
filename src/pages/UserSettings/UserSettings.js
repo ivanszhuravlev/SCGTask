@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Text, View, ScrollView} from 'react-native'
 import styles from './UserSettingsStyles'
 import Heading from '../../components/Heading/Heading'
 import PhotoUploadBar from '../../components/PhotoUploadBar/PhotoUploadBar';
@@ -49,7 +48,7 @@ export class UserSettings extends Component {
                 </Heading>
                 <PhotoUploadBar pushPhotoLoaded={this.getPhotoLoaded}/>
                 <UserForm pushValid={this.getFormState} />
-                <SubmitButton text="Save" disabled={!this.state.formValid && !this.state.photoLoaded}/>
+                <SubmitButton text="Save" disabled={!this.state.formValid || !this.state.photoLoaded}/>
             </KeyboardAwareScrollView>
         )
     }
